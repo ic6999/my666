@@ -1,0 +1,24 @@
+以此PAGES项目原理和资源为模板，采用workers固定代码+自混淆+自定义域名创建定制版项目
+
+1、复制粘贴代码i311hxb.js（从可用源代码复制+自混淆）
+2、添加UUID、TR_PASS、PROXYIP变量，KV空间绑定名称kv（小写）:
+3、面板设置：
+Fake DNS: Enable
+Protocols: ✓VLESS ✓Trojan
+TLS/Ports：✓443即可，其他端口可以不选（节点数=实际*端口数*协议数，其实都是同一节点）
+
+IPDB参数及请求地址:
+https://ipdb.api.030101.xyz/
+
+JavaScript混淆加密：
+https://toolonline.net/js-obfuscator
+自定义域名：cloudns
+https://www.cloudns.net/records/domain/8924641/
+
+IP查询地址：
+https://m.ip138.com
+批量IP查询：https://reallyfreegeoip.org/bulk
+
+检查 DNS 是否存在泄漏
+访问 IPLEAK.NET 检查 DNS 是否存在泄漏 https://ipleak.net/
+正常情况下，页面上方应当出现你的机场节点的 IPv4 和 IPv6 地址，页面下方无中国大陆 DNS 出现即为 DNS 无泄漏情况
