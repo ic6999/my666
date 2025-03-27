@@ -1,1 +1,9 @@
-workers项目说明
+以此PAGES项目为模板，采用workers固定代码+自混淆+自定义域名创建定制版项目
+
+1、复制粘贴代码i311hxb.js（从可用源代码复制+自混淆）
+2、添加UUID、TR_PASS、PROXYIP变量，KV空间绑定名称kv（小写）:
+
+JavaScript混淆加密：
+https://toolonline.net/js-obfuscator
+自定义域名：cloudns
+https://www.cloudns.net/records/domain/8924641/
