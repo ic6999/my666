@@ -1,24 +1,40 @@
-以此PAGES项目原理和资源为模板，采用workers固定代码+自混淆+自定义域名创建定制版项目
+这是workers项目资源和方法，采用最新源代码+自混淆+自定义域名创建定制版项目
 
-1、复制粘贴代码i311hxb.js（从可用源代码复制+自混淆）
-2、添加UUID、TR_PASS、PROXYIP变量，KV空间绑定名称kv（小写）:
-3、面板设置：
+【方法步骤】
+① CF-workers-创建
+②替换有效的workers混淆代码，如i311hxb.js（从源代码复制+自混淆）
+③访问域名后加/secrets，进入Secrets generator
+复制添加生成的UUID、TR_PASS、SUB_PATH变量及值
+④ CF主页添加KV存储空间如：a，项目绑定KV命名空间名称kv(小写):值a
+⑤添加自定义域: ?（并双向解析到ClouDNS及绑定SSL/TLS证书，若收费域名可能无需此步骤）
+⑥域名后加/panel进入面板参数设置：
 Fake DNS: Enable
 Protocols: ✓VLESS ✓Trojan
-TLS/Ports：✓443即可，其他端口可以不选（节点数=实际*端口数*协议数，其实都是同一节点）
+TLS/Ports：✓443即可，其他端口可以不选（节点数=实际*端口数*协议数，其实可能是同一节点）
+反代Proxy IPs:168.138.165.174 , 199.59.243.228 , 141.147.187.233
+优选Clean IPs:172.67.74.7 , 190.93.245.17 , 104.17.1.171
+路由规则：勾选bypass china/lan（因订阅地址在openclash不可转换，未设置会影响国内直连）
+⑦复制SUB订阅地址
+更新设置后-应用-openclash中直接更新即可，不必每次重新粘贴地址。
 
+【配套资源】
+@github/IPDB API库资源:
+https://github.com/xiaoer8867785/-ip
 IPDB参数及请求地址:
 https://ipdb.api.030101.xyz/
+bestcf：优选 Cloudflare 官方 IP 地址列表(Half hour)
+proxy：Cloudflare 反代 IP 地址列表(Ten min)
+bestproxy：优选 Cloudflare 反代 IP 地址列表(Half hour)
+获取地址：
+Clean IPs/Domains:
+https://ipdb.api.030101.xyz/?type=bestcf&country=true
+Proxy IPs / Domains:
+https://ipdb.api.030101.xyz/?type=bestproxy&country=true
 
+BPB源代码：
+https://github.com/bia-pain-bache/BPB-Worker-Panel/blob/main/build/unobfuscated-worker.js
 JavaScript混淆加密：
 https://toolonline.net/js-obfuscator
-自定义域名：cloudns
-https://www.cloudns.net/records/domain/8924641/
+免费自定义域名：cloudns
+https://www.cloudns.net
 
-IP查询地址：
-https://m.ip138.com
-批量IP查询：https://reallyfreegeoip.org/bulk
-
-检查 DNS 是否存在泄漏
-访问 IPLEAK.NET 检查 DNS 是否存在泄漏 https://ipleak.net/
-正常情况下，页面上方应当出现你的机场节点的 IPv4 和 IPv6 地址，页面下方无中国大陆 DNS 出现即为 DNS 无泄漏情况
