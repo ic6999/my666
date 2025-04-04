@@ -4,15 +4,15 @@
 ① CF-workers-创建
 ②替换有效的workers混淆代码，如i311hxb.js（从源代码复制+自混淆）
 ③访问域名后加/secrets，进入Secrets generator
-复制添加生成的UUID、TR_PASS、SUB_PATH变量及值
+复制添加生成的UUID、TR_PASS、SUB_PATH变量及值；PROXYIP
 ④ CF主页添加KV存储空间如：a，项目绑定KV命名空间名称kv(小写):值a
 ⑤添加自定义域: ?（并双向解析到ClouDNS及绑定SSL/TLS证书，若收费域名可能无需此步骤）
 ⑥域名后加/panel进入面板参数设置：
 Fake DNS: Enable
 Protocols: ✓VLESS ✓Trojan
 TLS/Ports：✓443即可，其他端口可以不选（节点数=实际*端口数*协议数，其实可能是同一节点）
-反代Proxy IPs:168.138.165.174 , 199.59.243.228 , 141.147.187.233
-优选Clean IPs:172.67.74.7 , 190.93.245.17 , 104.17.1.171
+反代Proxy IPs:
+优选Clean IPs:
 路由规则：勾选bypass china/lan（因订阅地址在openclash不可转换，未设置会影响国内直连）
 ⑦复制SUB订阅地址
 更新设置后-应用-openclash中直接更新即可，不必每次重新粘贴地址。
