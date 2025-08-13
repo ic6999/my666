@@ -23,8 +23,7 @@ https://github.com/xiaobaikeji831/cfDAIMA/blob/main/bpb%20%E4%BB%A3%E7%A0%81
 
 创建pages-连接到git库或上传zip文件/文件夹
 
-添加自定义域名：如
-https://p1.ic6.qzz.io/panel
+添加自定义域名：
 
 添加变量:
 UUID：
