@@ -4,15 +4,7 @@
 
 https://github.com/bia-pain-bache/BPB-Worker-Panel/releases
 
--手动更新：
-
-https://github.com/ic6999/p1/actions/workflows/update-worker.yml
-
--v3.2.7之前稳定版本已收录在本项目release目录
-
--修改过的同步代码：release/iworkflows.yml:每月更新一次；只删除旧版worker.js,保留主目录下其他文件。
-
-【v3.2.3】
+【v3.2.3+】
 
 -PROXYIP环境变量重命名为PROXY_IP 
 
@@ -29,10 +21,10 @@ https://github.com/xiaobaikeji831/cfDAIMA/blob/main/bpb%20%E4%BB%A3%E7%A0%81
 
 2.Cloudflare项目设置
 
-创建pages-连接到git
+创建pages-连接到git库或上传zip文件/文件夹
 
-添加自定义域名：
-https://p1.ic666.ddns-ip.net/panel
+添加自定义域名：如
+https://p1.ic6.qzz.io/panel
 
 添加变量:
 UUID：
@@ -74,8 +66,7 @@ TLS Ports
 https://crontab.guru #详细参数说明
 
 
-
-
+【原教程】
 
 ## 使用方法[视频教程](https://youtu.be/sWy9gCBA5Lo)
 1. 新建一个私人仓库，项目可随意命名，但要避开 BPB 敏感词。
